@@ -22,7 +22,7 @@ import lombok.Setter;
 public class Portfolio {
     
     private long id;
-    private String perfileBackgound;
+    private String profileBackground;
     private String profileImage;
     private String firstName;
     private String lastName;
@@ -42,10 +42,22 @@ public class Portfolio {
     
     public Portfolio(){
         
-    educationList = new ArrayList<Education>();
-    experienceList = new ArrayList<Experience>();
-    skillList = new ArrayList<Skill>();
-    proyectList = new ArrayList<Proyect>();
+               
+       setId(12345676);
+       setFirstName("Jorge");
+       setLastName("Panigo");
+       setMail("jorgepanigo@gmail.com");
+       setCountry("Argentina");
+       setCity("La Plata");
+       setPhone("2215988023");
+       setProfession("Jr FullStack Developer");
+       setAboutMe("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+ 
+        
+        educationList = new ArrayList<Education>();
+        experienceList = new ArrayList<Experience>();
+        skillList = new ArrayList<Skill>();
+        proyectList = new ArrayList<Proyect>();
         
         Education ed1 = new Education(0, "FRLP - UTN", "", "Ingenieria en Sistemas", new Date(), new Date());
         Education ed2 = new Education(1, "EEM Nro 4", "", "Bachiller", new Date(), new Date());
