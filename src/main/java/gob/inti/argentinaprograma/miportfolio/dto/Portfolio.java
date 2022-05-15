@@ -4,8 +4,12 @@
  * and open the template in the editor.
  */
 
-package gob.inti.argentinaprograma.miportfolio.Model;
+package gob.inti.argentinaprograma.miportfolio.dto;
 
+import gob.inti.argentinaprograma.miportfolio.model.Education;
+import gob.inti.argentinaprograma.miportfolio.model.Experience;
+import gob.inti.argentinaprograma.miportfolio.model.Proyect;
+import gob.inti.argentinaprograma.miportfolio.model.Skill;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

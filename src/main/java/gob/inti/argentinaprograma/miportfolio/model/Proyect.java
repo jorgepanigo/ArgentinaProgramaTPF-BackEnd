@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package gob.inti.argentinaprograma.miportfolio.Model;
+package gob.inti.argentinaprograma.miportfolio.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -23,6 +23,7 @@ public class Proyect {
     private String description;
     private String githubLink;
     private String image;
+    private String categoria;
 
     public Proyect(long id, String title, String description, String githubLink, String image) {
         this.id = id;

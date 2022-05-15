@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 
-package gob.inti.argentinaprograma.miportfolio.Model;
+package gob.inti.argentinaprograma.miportfolio.model;
 
 import java.util.Date;
+import javax.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +15,7 @@ import lombok.Setter;
  * 
  * @author Jorge Panigo <jorgepanigo@gmail.com>
  */
-
+@Entity
 @Getter @Setter
 public class Education {
     

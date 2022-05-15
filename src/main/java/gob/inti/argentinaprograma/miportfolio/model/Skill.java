@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package gob.inti.argentinaprograma.miportfolio.Model;
+package gob.inti.argentinaprograma.miportfolio.model;
 
 import lombok.Getter;
 import lombok.Setter;

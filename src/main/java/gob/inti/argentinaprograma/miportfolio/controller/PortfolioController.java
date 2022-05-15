@@ -6,8 +6,8 @@
 
 package gob.inti.argentinaprograma.miportfolio.controller;
 
-import gob.inti.argentinaprograma.miportfolio.Model.Education;
-import gob.inti.argentinaprograma.miportfolio.Model.Portfolio;
+import gob.inti.argentinaprograma.miportfolio.model.Education;
+import gob.inti.argentinaprograma.miportfolio.dto.Portfolio;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
