@@ -6,6 +6,8 @@
 
 package gob.inti.argentinaprograma.miportfolio.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,16 +16,19 @@ import lombok.Setter;
  * @author Jorge Panigo <jorgepanigo@gmail.com>
  */
 
+@Entity
 @Getter @Setter
 
 public class Proyect {
-
+    
+    @Id
     private long id;
+    
     private String title;
     private String description;
     private String githubLink;
     private String image;
-    private String categoria;
+    private String category;
 
     public Proyect(long id, String title, String description, String githubLink, String image) {
         this.id = id;

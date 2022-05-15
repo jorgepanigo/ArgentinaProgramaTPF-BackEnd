@@ -6,6 +6,8 @@
 
 package gob.inti.argentinaprograma.miportfolio.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,9 +15,12 @@ import lombok.Setter;
  * 
  * @author Jorge Panigo <jorgepanigo@gmail.com>
  */
+
+@Entity
 @Getter @Setter
 public class Skill {
     
+    @Id
     private long id;
     private String type;
     private String name;
