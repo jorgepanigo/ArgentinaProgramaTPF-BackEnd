@@ -43,6 +43,11 @@ public class Education {
         this.beginDate = beginDate;
         this.endDate = endDate;
     }
+
+    public Education() {
+    }
+    
+    
     
     
 }
