@@ -7,6 +7,7 @@
 package gob.inti.argentinaprograma.miportfolio.service;
 
 import gob.inti.argentinaprograma.miportfolio.model.Education;
+import gob.inti.argentinaprograma.miportfolio.repository.EducationRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,26 +21,26 @@ import org.springframework.stereotype.Service;
 public class EducationService implements IEducationService{
     
     @Autowired
-    private EducationService es;
+    private EducationRepository es;
 
     @Override
     public Education getItem(Long id) {
-        return es.getItem(id);
+        return es.getById(id);
     }
 
     @Override
     public List<Education> getList() {
-        return es.getList();
+        return es.findAll();
     }
 
     @Override
     public void update(Education e) {
-        es.update(e);
+        es.save(e);
     }
 
     @Override
     public void delete(Long id) {
-        es.delete(id);
+        es.deleteById(id);
     }
 
     
