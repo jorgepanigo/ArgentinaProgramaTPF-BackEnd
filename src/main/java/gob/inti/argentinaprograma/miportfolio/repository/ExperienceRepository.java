@@ -7,11 +7,13 @@ package gob.inti.argentinaprograma.miportfolio.repository;
 
 import gob.inti.argentinaprograma.miportfolio.model.Experience;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Jorge Panigo <jorgepanigo@gmail.com>
  */
+@Repository
 public interface ExperienceRepository extends JpaRepository<Experience, Long>{
     
 }
