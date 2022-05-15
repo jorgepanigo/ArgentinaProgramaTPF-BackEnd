@@ -6,9 +6,12 @@
 
 package gob.inti.argentinaprograma.miportfolio.model;
 
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,6 +37,21 @@ public class Person {
     private String mail; 
     private String phone;
     private String aboutMe; 
+    
+    @OneToMany
+    private List<Education> education;
+    
+    @OneToMany
+    private List<Experience> experience;
+    
+    @OneToMany
+    private List<Skill> skill;
+    
+    @OneToMany
+    private List<Proyect> proyect;
+    
+    
+    
 
     public Person(long id, String profileBackground, String profileImage, String firstName, String lastName, String city, String country, String profession, String mail, String phone, String aboutMe) {
         this.id = id;
@@ -48,6 +66,10 @@ public class Person {
         this.phone = phone;
         this.aboutMe = aboutMe;
     }
+
+    public Person() {
+    }
+    
     
     
     
