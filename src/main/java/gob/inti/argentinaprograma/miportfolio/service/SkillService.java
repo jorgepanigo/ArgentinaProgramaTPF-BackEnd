@@ -6,8 +6,8 @@
 
 package gob.inti.argentinaprograma.miportfolio.service;
 
-import gob.inti.argentinaprograma.miportfolio.model.Experience;
-import gob.inti.argentinaprograma.miportfolio.repository.ExperienceRepository;
+import gob.inti.argentinaprograma.miportfolio.model.Skill;
+import gob.inti.argentinaprograma.miportfolio.repository.SkillRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,31 +17,35 @@ import org.springframework.stereotype.Service;
  * @author Jorge Panigo <jorgepanigo@gmail.com>
  */
 @Service
-public class ExperienceService implements IExperienceService{
-
-    @Autowired
-    private ExperienceRepository exr;
+public class SkillService implements ISkillService{
     
+    @Autowired
+    private SkillRepository sr;
+
     @Override
-    public Experience getItem(Long id) {
-            return exr.getById(id);
+    public Skill getItem(Long id) {
+           return sr.getById(id);
     }
 
     @Override
-    public List<Experience> getList() {
-            return exr.findAll();
+    public List<Skill> getList() {
+          return null;
     }
 
     @Override
-    public Experience update(Experience e) {
-           exr.save(e);
-        return exr.getById(e.getId());
+    public Skill update(Skill s) {
+         sr.save(s);
+        return sr.getById(s.getId());
     }
 
     @Override
     public void delete(Long id) {
-            exr.deleteById(id);
+        
     }
 
-    
+    @Override
+    public void newItem(Skill s, Long idPerson) {
+        
+    }
+
 }

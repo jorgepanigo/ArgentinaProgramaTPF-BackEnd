@@ -22,10 +22,13 @@ public interface IEducationService {
     public List<Education> getList();
     
     //Actualiza datos de un item
-    public void update (Education e);
+    public Education update (Education e);
     
     //Elimina un item por por id
     public void delete (Long id);
+    
+    //Añade un Item nuevo
+    public void newItem (Education e, Long idPerson);
     
     
     

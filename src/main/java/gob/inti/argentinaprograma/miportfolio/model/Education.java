@@ -7,7 +7,10 @@
 package gob.inti.argentinaprograma.miportfolio.model;
 
 import java.util.Date;
+import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -24,12 +27,15 @@ import lombok.Setter;
 public class Education {
     
     @Id
-    private long id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
     
+    @Basic
     private String institution;
     private String institutionImg;
     private String degree;
     
+ 
     @Temporal(TemporalType.DATE)
     private Date beginDate;
     @Temporal(TemporalType.DATE)

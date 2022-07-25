@@ -7,8 +7,12 @@
 package gob.inti.argentinaprograma.miportfolio.model;
 
 import java.util.Date;
+import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.Getter;
@@ -24,10 +28,15 @@ import lombok.Setter;
 public class Experience {
     
     @Id
-    private long id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    
+    @Basic
     private String company;
     private String companyImg;
     private String position;
+    
+
     
     @Temporal(TemporalType.DATE)
     private Date beginDate;
@@ -35,7 +44,7 @@ public class Experience {
     @Temporal(TemporalType.DATE)
     private Date endDate;
 
-    public Experience(long id, String company, String companyImg, String position, Date beginDate, Date endDate) {
+    public Experience(Long id, String company, String companyImg, String position, Date beginDate, Date endDate) {
         this.id = id;
         this.company = company;
         this.companyImg = companyImg;
@@ -43,6 +52,8 @@ public class Experience {
         this.beginDate = beginDate;
         this.endDate = endDate;
     }
+    
+    public Experience(){}
     
     
 

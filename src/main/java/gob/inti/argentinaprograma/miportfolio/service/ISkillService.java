@@ -5,25 +5,28 @@
  */
 package gob.inti.argentinaprograma.miportfolio.service;
 
-import gob.inti.argentinaprograma.miportfolio.model.Experience;
+
+import gob.inti.argentinaprograma.miportfolio.model.Skill;
 import java.util.List;
 
 /**
  *
  * @author Jorge Panigo <jorgepanigo@gmail.com>
  */
-public interface IExperienceService {
-    
-    //Devuelve lista de items de experiencia
-    public Experience getItem(Long id);
+public interface ISkillService{
+     
+    //Devuelve lista de items de aducacion
+    public Skill getItem(Long id);
     
     //Devuelve un item en paricular
-    public List<Experience> getList();
+    public List<Skill> getList();
     
     //Actualiza datos de un item
-    public Experience update (Experience e);
+    public Skill update (Skill s);
     
     //Elimina un item por por id
     public void delete (Long id);
     
+    //Añade un Item nuevo
+    public void newItem (Skill s, Long idPerson);
 }

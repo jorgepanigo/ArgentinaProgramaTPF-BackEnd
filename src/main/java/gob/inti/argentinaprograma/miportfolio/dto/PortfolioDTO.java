@@ -8,11 +8,8 @@ package gob.inti.argentinaprograma.miportfolio.dto;
 
 import gob.inti.argentinaprograma.miportfolio.model.Education;
 import gob.inti.argentinaprograma.miportfolio.model.Experience;
-import gob.inti.argentinaprograma.miportfolio.model.Person;
 import gob.inti.argentinaprograma.miportfolio.model.Proyect;
 import gob.inti.argentinaprograma.miportfolio.model.Skill;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,8 +26,6 @@ public class PortfolioDTO {
     
     
     private long id;
-    
-    private Person person;
     private String profileBackground;
     private String profileImage;
     private String firstName;
@@ -41,6 +36,8 @@ public class PortfolioDTO {
     private String mail; 
     private String phone;
     private String aboutMe; 
+    private String linkedin;
+    private String github;
     private List<Education> educationList;
     private List<Experience> experienceList;
     private List<Skill> skillList;

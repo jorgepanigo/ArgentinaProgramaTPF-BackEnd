@@ -6,7 +6,10 @@
 
 package gob.inti.argentinaprograma.miportfolio.model;
 
+import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,23 +24,30 @@ import lombok.Setter;
 
 public class Proyect {
     
-    @Id
-    private long id;
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    
+    @Basic
     private String title;
     private String description;
     private String githubLink;
     private String image;
     private String category;
 
-    public Proyect(long id, String title, String description, String githubLink, String image) {
+
+    public Proyect(Long id, String title, String description, String githubLink, String image) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.githubLink = githubLink;
         this.image = image;
     }
-    
 
+    public Proyect() {
+    }
+    
+    
     
 }

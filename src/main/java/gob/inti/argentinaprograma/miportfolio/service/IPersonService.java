@@ -5,6 +5,7 @@
  */
 package gob.inti.argentinaprograma.miportfolio.service;
 
+import gob.inti.argentinaprograma.miportfolio.dto.HeaderDTO;
 import gob.inti.argentinaprograma.miportfolio.model.Person;
 
 /**
@@ -13,8 +14,14 @@ import gob.inti.argentinaprograma.miportfolio.model.Person;
  */
 public interface IPersonService {
     
-    public Person getPerson(Long id);
+    public Person getPerson(Long id);   
     
-    public void UpdatePerson(Person p);
+    public void updateHeader(HeaderDTO p, Long id);
+    
+    public void setAboutMe(String about, Long id);
+    
+    public void updatePerson(Person p);
+    
+
     
 }
