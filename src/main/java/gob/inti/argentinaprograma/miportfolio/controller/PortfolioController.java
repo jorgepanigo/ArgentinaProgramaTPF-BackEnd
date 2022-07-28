@@ -55,7 +55,7 @@ public class PortfolioController {
     @Autowired
     private ExperienceService exs;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    
     @GetMapping("/{id}")
     public PortfolioDTO portfolio(@PathVariable Long id){
        
